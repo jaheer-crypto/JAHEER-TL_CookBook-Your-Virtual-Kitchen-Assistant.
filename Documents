@@ -1,0 +1,217 @@
+hpart: HTML, CSS, and javaScript.
+
+
+---
+
+📘 Documentation: CookBook — Interactive Cooking Mode
+
+1. Overview
+
+This project is an interactive recipe cookbook web app.
+Users can:
+
+Browse recipe cards with images.
+
+Search recipes or ingredients.
+
+View recipe details (ingredients + steps).
+
+Enter Cooking Mode, which walks them through each step with progress tracking.
+
+Use keyboard shortcuts for navigation (←, →, Space).
+
+
+The app uses HTML, CSS, and Vanilla JavaScript (no frameworks).
+
+
+---
+
+2. File Structure
+
+index.html    → main file (HTML + embedded CSS & JS)
+
+
+---
+
+3. HTML Structure
+
+<head>
+
+Declares meta charset, viewport, title.
+
+Contains <style> block with CSS variables, layout, and component styling.
+
+
+<body>
+
+Header
+
+Title: CookBook — Interactive Cooking.
+
+Subtitle: instruction to click and start cooking.
+
+Controls:
+
+Search bar (#search)
+
+Add button (#btn-add)
+
+
+
+Main (#app)
+
+Recipes and details are dynamically injected by JavaScript.
+
+
+Footer
+
+Displays keyboard shortcuts (← previous • → next • Space = toggle auto-advance).
+
+
+
+
+---
+
+4. CSS (Styling)
+
+Root variables:
+
+--bg, --card, --accent, --muted, --dark, --radius, --shadow
+
+for theme consistency.
+
+Layout Classes
+
+.container → max-width wrapper.
+
+.features → grid layout for recipe cards.
+
+.card → recipe card with hover effects.
+
+.recipe-detail → expanded recipe view.
+
+.cooking → step-by-step guided mode.
+
+
+Cooking Mode Elements
+
+.step-card → holds step number, text, and optional images.
+
+.progress-wrap + .progress-fill → progress bar.
+
+.cook-controls → navigation buttons.
+
+.timer → optional countdown timer UI.
+
+
+Responsive
+
+At screen width ≤ 720px, text size and card image height adapt.
+
+
+
+
+---
+
+5. JavaScript (Logic)
+
+Defined in <script> at bottom of page.
+
+sampleRecipes (Preloaded Data)
+
+Array of 10 recipe objects.
+
+Each object includes:
+
+{
+  id: 1,
+  title: "Classic Spaghetti Carbonara",
+  description: "...",
+  image: "...",
+  ingredients: [...],
+  steps: [...]
+}
+
+
+Key Functionalities
+
+1. Render Recipes
+Dynamically adds recipe cards into #app.
+Each card shows:
+
+Image
+
+Title
+
+Short description
+
+
+
+2. Recipe Detail View
+When clicked, a card expands to show:
+
+Ingredients list
+
+Cooking steps
+
+
+
+3. Cooking Mode
+
+Displays one step at a time.
+
+Progress bar updates with each step.
+
+Navigation buttons: Next, Previous, Finish.
+
+Keyboard shortcuts:
+
+← → Previous step
+
+→ → Next step
+
+Space → Toggle auto-step
+
+
+
+
+4. Search Functionality
+
+Input in #search filters recipes by title or ingredients.
+
+
+
+5. Add Button (#btn-add)
+
+Placeholder for future expansion (e.g., add new recipes).
+
+
+
+
+
+---
+
+6. Features Summary
+
+✅ Modern responsive design
+✅ 10+ preloaded recipes with images
+✅ Search recipes by name/ingredient
+✅ Step-by-step Cooking Mode
+✅ Progress bar + Keyboard controls
+✅ Expandable for custom recipe addition
+
+
+---
+
+7. Future Enhancements
+
+Save user-added recipes to localStorage.
+
+
+
+
+---
+
+👉 This documentation is ready to be turned into a PPT if you want.
+
+Do you want me to convert this into a presentation (PPT) with design and effects like we did for your earlier cookbook project?
